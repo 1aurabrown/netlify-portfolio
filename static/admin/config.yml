@@ -23,7 +23,6 @@ collections:
       - name: role
         label: Role
         widget: string
-
   - name: page
     label: Page
     files:
@@ -89,4 +88,4 @@ collections:
                         fields:
                           - { label: Value, name: value, widget: string }
                           - { label: Label, name: label, widget: string }
-          - { label: Submit Button Text, name: submit_text, widget: string  }
+              - { label: Submit Button Text, name: submit_text, widget: string  }

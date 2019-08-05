@@ -4,12 +4,88 @@ backend:
 media_folder: static/assets
 public_folder: assets
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: project
+    label: Project
+    folder: _data/project
     create: true
+    extension: yaml
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - name: title
+        label: Title
+        widget: text
+      - name: url
+        label: URL
+        widget: text
+      - name: year
+        label: Year
+        widget: number
+      - name: role
+        label: Role
+        widget: text
+
+  - name: page
+    label: Page
+    files:
+      -
+        name: about
+        label: About
+        file: _data/pages/about.yaml
+        fields:
+          - { label: Heading, name: heading, widget: text }
+          - { label: Body, name: body, widget: markdown }
+      -
+        name: contact
+        label: Contact
+        file: _data/pages/about.yaml
+        fields:
+          - { label: Heading, name: heading, widget: text }
+          - { label: Body, name: body, widget: markdown }
+          -
+            label: Form,
+            name: form
+            widget: object
+            fields:
+              -
+                label: Fields
+                name: fields
+                widget: list
+                types:
+                  -
+                    label: Text
+                    name: text
+                    widget: object
+                    fields:
+                      - { label: Placeholder, name: placeholder, widget: string }
+                      - { label: Label, name: label, widget: string }
+                      - { label: Name, name: name, widget: string }
+                  -
+                    label: Email
+                    name: email
+                    widget: object
+                    fields:
+                    - { label: Placeholder, name: placeholder, widget: string }
+                    - { label: Label, name: label, widget: string }
+                    - { label: Name, name: name, widget: string }
+                  -
+                    label: Text Area
+                    name: text_area
+                    widget: object
+                    fields:
+                    - { label: Placeholder, name: placeholder, widget: string }
+                    - { label: Label, name: label, widget: string }
+                    - { label: Name, name: name, widget: string }
+                  -
+                    label: Radio
+                    name: radio
+                    widget: object
+                    fields:
+                      - { label: Label, name: label, widget: string }
+                      - { label: Name, name: name, widget: string }
+                      -
+                        label: Options
+                        name: options
+                        widget: list
+                        fields:
+                          - { label: Value, name: value, widget: string }
+                          - { label: Label, name: label, widget: string }
+          - { label: Submit Button Text, name: submit_text, widget: string  }

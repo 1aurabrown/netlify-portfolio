@@ -16,9 +16,10 @@ collections:
       - name: url
         label: URL
         widget: string
+        required: false
       - name: year
         label: Year
-        widget: number
+        widget: string
       - name: role
         label: Role
         widget: string
@@ -36,12 +37,12 @@ collections:
       -
         name: contact
         label: Contact
-        file: _data/pages/about.yaml
+        file: _data/pages/contact.yaml
         fields:
           - { label: Heading, name: heading, widget: text }
           - { label: Body, name: body, widget: markdown }
           -
-            label: Form,
+            label: Form
             name: form
             widget: object
             fields:

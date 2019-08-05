@@ -12,16 +12,16 @@ collections:
     fields:
       - name: title
         label: Title
-        widget: text
+        widget: string
       - name: url
         label: URL
-        widget: text
+        widget: string
       - name: year
         label: Year
         widget: number
       - name: role
         label: Role
-        widget: text
+        widget: string
 
   - name: page
     label: Page

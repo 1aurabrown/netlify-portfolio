@@ -4,9 +4,10 @@ backend:
 media_folder: static/assets
 public_folder: assets
 collections:
-  - name: project
-    label: Project
-    folder: _data/project
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: src/data/projects
     create: true
     extension: yaml
     fields:
@@ -23,21 +24,24 @@ collections:
       - name: role
         label: Role
         widget: string
-  - name: page
-    label: Page
+  - name: pages
+    label: Pages
+    label_singular: Page
     files:
       -
         name: about
         label: About
-        file: _data/pages/about.yaml
+        file: src/data/pages/about.yaml
         fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about" }
           - { label: Heading, name: heading, widget: text }
           - { label: Body, name: body, widget: markdown }
       -
         name: contact
         label: Contact
-        file: _data/pages/contact.yaml
+        file: src/data/pages/contact.yaml
         fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "contact" }
           - { label: Heading, name: heading, widget: text }
           - { label: Body, name: body, widget: markdown }
           -

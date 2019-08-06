@@ -30,5 +30,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "scripts": {
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop"
   }
 }

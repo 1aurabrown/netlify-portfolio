@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/_data/pages/`,
+        path: `${__dirname}/src/data/pages/`,
         ignore: [`**/\.*`],
       }
     },
@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
-        path: `${__dirname}/_data/project/`,
+        path: `${__dirname}/src/data/projects/`,
         ignore: [`**/\.*`],
       }
     },
